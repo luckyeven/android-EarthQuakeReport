@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/earthquake_list_view"
+    android:orientation="horizontal"
+    android:layout_margin="16dp"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_margin="16dp"
+        android:text="0.0"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/location"
+        android:text="null"
+        android:layout_weight="1"
+        android:layout_margin="16dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/mTime"
+        android:layout_weight="1"
+        android:layout_margin="16dp"
+        android:text="Feb 2,2016"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

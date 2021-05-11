@@ -16,22 +16,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // An arraylist containing locations.
-        ArrayList<String> earthQuakes = new ArrayList<>();
-        earthQuakes.add("San Francisco");
-        earthQuakes.add("London");
-        earthQuakes.add("Tokyo");
-        earthQuakes.add("Mexico City");
-        earthQuakes.add("Moscow");
-        earthQuakes.add("Rio de Janeiro");
-        earthQuakes.add("Paris");
+        // An arraylist containing placeholder data.
+        ArrayList<EarthQuake> earthQuakes = new ArrayList<EarthQuake>();
+        earthQuakes.add(new EarthQuake(7.2,"San Francisco",46565464,"http"));
+        earthQuakes.add(new EarthQuake(6.1,"London",46565464,"http"));
+        earthQuakes.add(new EarthQuake(3.9,"Tokyo",46565464,"http"));
+        earthQuakes.add(new EarthQuake(5.4,"Mexico City",46565464,"http"));
+        earthQuakes.add(new EarthQuake(2.8,"Moscow",46565464,"http"));
+        earthQuakes.add(new EarthQuake(4.9,"Rio de Janeiro",46565464,"http"));
+        earthQuakes.add(new EarthQuake(1.6,"Paris",46565464,"http"));
+
 
         // Find a reference to the listviwe in the main layout.
         ListView earthquakeListView = (ListView) findViewById(R.id.list);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-                this, android.R.layout.simple_list_item_1,earthQuakes
-        );
+        EarthQuakeAdapter adapter = new EarthQuakeAdapter(this,earthQuakes);
 
         earthquakeListView.setAdapter(adapter);
     }
