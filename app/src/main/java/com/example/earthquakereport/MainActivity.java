@@ -17,15 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // An arraylist containing placeholder data.
-        ArrayList<EarthQuake> earthQuakes = new ArrayList<EarthQuake>();
-        earthQuakes.add(new EarthQuake(7.2,"San Francisco",46565464,"http"));
-        earthQuakes.add(new EarthQuake(6.1,"London",46565464,"http"));
-        earthQuakes.add(new EarthQuake(3.9,"Tokyo",46565464,"http"));
-        earthQuakes.add(new EarthQuake(5.4,"Mexico City",46565464,"http"));
-        earthQuakes.add(new EarthQuake(2.8,"Moscow",46565464,"http"));
-        earthQuakes.add(new EarthQuake(4.9,"Rio de Janeiro",46565464,"http"));
-        earthQuakes.add(new EarthQuake(1.6,"Paris",46565464,"http"));
-
+        ArrayList<EarthQuake> earthQuakes = QueryUtils.extractEarthquakes();
 
         // Find a reference to the listviwe in the main layout.
         ListView earthquakeListView = (ListView) findViewById(R.id.list);
